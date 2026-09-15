@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import {
   ArrowUpRight,
   ArrowRight,
@@ -155,10 +156,11 @@ export default function Home() {
             </div>
           </div>
           <div className="hero-visual">
-            <img
+            <Image
+              width={1254} height={1254} sizes="(max-width: 760px) 100vw, 50vw"
               className="hero-image"
-              src="/images/marmita-carne.png"
-              alt="Marmita com carne de panela, batatas, arroz branco e farofa"
+              src="/images/marmita-carne-handdraw.png"
+              alt="Ilustração de marmita com carne de panela, batatas, arroz branco e farofa"
               fetchPriority="high"
             />
             <div className="photo-shade" />
@@ -241,9 +243,10 @@ export default function Home() {
         </section>
         <section id="como-funciona" className="how section">
           <div className="how-image">
-            <img
-              src="/images/marmita-empanado.png"
-              alt="Marmita com filé empanado, arroz branco, feijão e purê"
+            <Image
+              width={1254} height={1254} sizes="(max-width: 760px) 100vw, 45vw"
+              src="/images/marmita-empanado-handdraw.png"
+              alt="Ilustração de marmita com filé empanado, arroz branco, feijão e purê"
               loading="lazy"
             />
             <div className="image-label">

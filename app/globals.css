@@ -1610,3 +1610,23 @@ h2 em { font-family: 'Manrope', sans-serif; font-weight: 650; }
 .voters-message { padding: 20px 0; }
 .voters-footnote, .legacy-email { color: var(--muted); font-size: 11px!important; }
 @media (max-width: 760px) { .voters-heading { align-items: start; flex-direction: column; } .voters-heading p { max-width: none; } .voters-table { min-width: 510px; } }
+
+/* Hand-drawn meal illustrations on a warm paper-colored canvas. */
+.hero-visual, .how-image { background: #fef4ef; }
+.hero-image, .how-image img {
+  object-fit: contain;
+  object-position: center;
+  transform: none;
+  filter: none;
+  mix-blend-mode: normal;
+  padding: 65px 26px;
+}
+.hero-visual:hover .hero-image { transform: none; }
+.photo-shade { display: none; }
+.image-caption, .photo-note, .image-label { color: var(--wine); }
+.photo-note { bottom: 39px; }
+@media (max-width: 760px) {
+  .hero-image { padding: 55px 12px; }
+  .how-image img { padding: 60px 12px 25px; }
+  .photo-note { bottom: 50px; font-size: 19px; }
+}

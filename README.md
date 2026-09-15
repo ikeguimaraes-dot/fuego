@@ -75,3 +75,5 @@ Fotos das marmitas fornecidas pelo proprietário, preservadas em PNG com transpa
 A comunicação apresenta comida saborosa e prática, sem posicionamento fit ou dietético.
 
 Teste específico de e-mails (pode rodar com uma votação ativa, usa somente rascunhos temporários): `node --test tests/voter-emails.test.mjs`.
+
+As imagens exibidas no site agora são ilustrações handdraw em `public/images/marmita-carne-handdraw.png` e `public/images/marmita-empanado-handdraw.png`. Criadas com image_gen a partir das fotos originais, com contornos de tinta e textura de lápis. Prompts completos em `docs/handdraw-prompts.md`. Servidas com otimização responsiva do Next.js.
