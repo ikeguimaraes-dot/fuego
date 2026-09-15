@@ -164,7 +164,7 @@ export default function Home() {
               fetchPriority="high"
             />
             <div className="photo-shade" />
-            <span className="image-caption">SABOR QUE ACENDE O SEU DIA.</span>
+            <span className="image-disclaimer">Imagem meramente ilustrativa</span>
             <div className="round-stamp">
               <img src="/brand/seal.svg" alt="Fuego — Templo do Sabor" />
             </div>
@@ -254,6 +254,7 @@ export default function Home() {
               <br />
               BEM FUEGO. <Flame />
             </div>
+            <span className="image-disclaimer">Imagem meramente ilustrativa</span>
           </div>
           <div className="how-content">
             <div className="eyebrow">02 / SIMPLES ASSIM</div>

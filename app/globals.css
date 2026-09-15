@@ -1630,3 +1630,12 @@ h2 em { font-family: 'Manrope', sans-serif; font-weight: 650; }
   .how-image img { padding: 60px 12px 25px; }
   .photo-note { bottom: 50px; font-size: 19px; }
 }
+
+.image-disclaimer {
+  position: absolute;
+  left: 24px;
+  bottom: 18px;
+  color: #716766;
+  font-size: 11px;
+  line-height: 1.4;
+}
