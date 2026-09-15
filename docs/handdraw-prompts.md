@@ -1,5 +1,11 @@
 # Ilustrações handdraw da Fuego
 
+## Atualização do fundo principal
+
+Arquivo: `public/images/marmita-carne-handdraw-vinho.png`. Ferramenta: image_gen nativa.
+
+Use case: precise-object-edit. Change ONLY the warm cream background surrounding the tray to a uniform solid dark burgundy red, exact target color #87181c, edge-to-edge. Keep the illustrated meal and black tray exactly unchanged: same hand-drawn pen outlines, same food colors and textures, same components, same placement and size, same perspective. Preserve the illustration without reinterpreting or repainting the food. No cream halo, no white rectangle, no border, no checkerboard, no transparency, no additional objects, no text or logos. Only replace the background with solid #87181c.
+
 Criadas com a ferramenta nativa image_gen, a partir das fotos fornecidas pelo proprietário. Os originais foram preservados.
 
 ## Arquivos finais
@@ -18,4 +24,3 @@ Complemento empanado: This meal: sliced breaded chicken cutlet in the large fron
 ## Prompt final de refinamento (ambas as imagens)
 
 Use case: style-transfer. Edit target: this meal illustration. Re-draw it in a more visibly HAND-DRAWN restaurant-menu sketch style: bold imperfect burgundy pen contours, loose crosshatching, expressive sparse colored-pencil strokes and FLAT gouache color blocks. Fewer details and far less shine, no photographic or digital oil-paint realism. Preserve exactly the current tray shape, compartment arrangement, food types and three-quarter view. Entire tray must fit within the square canvas with at least 8% blank margin on all sides. CRITICAL: completely REMOVE the gray checkerboard and replace all surrounding background with a single uniform warm off-white color #fff3ef. Opaque warm off-white background, absolutely NO checkerboard, no transparency, no fake alpha grid, no gradient, no added words, no labels, no extra objects. Restrained warm palette, appealing honest comfort food, a coherent hand-drawn editorial illustration. Do not modify the ingredients.
-

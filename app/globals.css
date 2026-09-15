@@ -1639,3 +1639,8 @@ h2 em { font-family: 'Manrope', sans-serif; font-weight: 650; }
   font-size: 11px;
   line-height: 1.4;
 }
+
+/* Restore the dark red backdrop of the main illustration. */
+.hero-visual { background: #87181c; }
+.hero-visual .photo-note { color: #fff3ef; }
+.hero-visual .image-disclaimer { color: #fff3ef; }

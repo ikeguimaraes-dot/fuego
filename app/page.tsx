@@ -159,7 +159,7 @@ export default function Home() {
             <Image
               width={1254} height={1254} sizes="(max-width: 760px) 100vw, 50vw"
               className="hero-image"
-              src="/images/marmita-carne-handdraw.png"
+              src="/images/marmita-carne-handdraw-vinho.png"
               alt="Ilustração de marmita com carne de panela, batatas, arroz branco e farofa"
               fetchPriority="high"
             />
