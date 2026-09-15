@@ -38,12 +38,14 @@ Há uma primeira enquete em rascunho com três sugestões (Clássicos da casa, F
 
 ## Banco e segurança
 
-A migração em `supabase/migrations/` cria somente objetos `fuego_*` e já foi aplicada ao projeto informado. Não execute um reset ou pull global neste projeto compartilhado. A cópia `supabase/schema.sql` é uma referência da mesma migração, não uma segunda etapa de instalação.
+As migrações em `supabase/migrations/` alteram somente objetos `fuego_*` e já foram aplicadas ao projeto informado. Não execute um reset ou pull global neste projeto compartilhado. A cópia `supabase/schema.sql` é uma referência consolidada das migrações, não uma segunda etapa de instalação.
 
 - RLS em todas as tabelas; autorização por associação explícita à equipe.
 - Rascunhos e resultados privados. A API pública retorna apenas a enquete aberta dentro do prazo.
 - Votos registrados por função de banco exclusiva do servidor, com validação atômica do prazo, da opção e de duplicidade.
-- E-mail e IP são transformados com HMAC-SHA256 antes da persistência; não armazenamos seus valores em texto nos votos.
+- E-mail e IP geram identificadores HMAC-SHA256 para controlar duplicidade e abuso. Após o aviso atualizado, o e-mail normalizado também é armazenado em `voter_email`, com acesso apenas a administradores via RLS. O IP original não é armazenado.
+- Em cada enquete, “Ver votantes e e-mails” mostra e-mail, cardápio escolhido e data, em páginas de 50 votos. Votos antigos continuam sem e-mail recuperável.
+- O cliente envia `emailNoticeVersion: 1` após exibir o aviso de armazenamento. Páginas antigas sem esse marcador continuam registrando somente identificadores, respeitando o aviso anterior.
 - Limite de 20 votos por identificador de IP em uma hora. O controle usa o cabeçalho confiável da Vercel em produção.
 - Um voto por e-mail por enquete. A titularidade do e-mail não é verificada: a enquete é consultiva, e esse mecanismo não garante uma pessoa única. Para exigências mais fortes, adicione confirmação de e-mail e CAPTCHA.
 - O site não implementa venda, cobrança ou envio de marketing.
@@ -71,3 +73,5 @@ Fotos das marmitas fornecidas pelo proprietário, preservadas em PNG com transpa
 - `public/images/marmita-empanado.png`
 
 A comunicação apresenta comida saborosa e prática, sem posicionamento fit ou dietético.
+
+Teste específico de e-mails (pode rodar com uma votação ativa, usa somente rascunhos temporários): `node --test tests/voter-emails.test.mjs`.

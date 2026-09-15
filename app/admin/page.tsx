@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { browserDb } from "@/lib/supabase";
 import type { Poll } from "@/lib/types";
+import Voters from "./voters";
 import {
   ArrowUpRight,
   Plus,
@@ -269,7 +270,12 @@ export default function Admin() {
     <>
       <header className="admin-header">
         <a href="/" className="wordmark">
-          <img src="/brand/logo.svg" alt="Fuego — Templo do Sabor" width={612} height={304} />
+          <img
+            src="/brand/logo.svg"
+            alt="Fuego — Templo do Sabor"
+            width={612}
+            height={304}
+          />
         </a>
         <div>
           <a href="/">
@@ -650,6 +656,7 @@ export default function Admin() {
                                 )}
                               </div>
                             ))}
+                            <Voters poll={p} db={db()} />
                             <div className="results-total">
                               <span>
                                 {count}{" "}

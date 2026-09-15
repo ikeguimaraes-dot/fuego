@@ -6,8 +6,12 @@ export async function POST(request: NextRequest) {
   let sameOrigin = false;
   try {
     const parsed = new URL(origin || "");
-    sameOrigin = ["https:", "http:"].includes(parsed.protocol) && parsed.host === request.headers.get("host");
-  } catch { /* Missing or malformed origins are rejected. */ }
+    sameOrigin =
+      ["https:", "http:"].includes(parsed.protocol) &&
+      parsed.host === request.headers.get("host");
+  } catch {
+    /* Missing or malformed origins are rejected. */
+  }
   if (!sameOrigin)
     return NextResponse.json({ error: "Origem inválida." }, { status: 403 });
   try {
@@ -18,11 +22,20 @@ export async function POST(request: NextRequest) {
         { status: 413 },
       );
     let payload;
-    try { payload = JSON.parse(body); } catch {
-      return NextResponse.json({ error: "Solicitação inválida." }, { status: 400 });
+    try {
+      payload = JSON.parse(body);
+    } catch {
+      return NextResponse.json(
+        { error: "Solicitação inválida." },
+        { status: 400 },
+      );
     }
-    if (!payload || typeof payload !== "object") return NextResponse.json({ error: "Solicitação inválida." }, { status: 400 });
-    const { pollId, optionId, email, website } = payload;
+    if (!payload || typeof payload !== "object")
+      return NextResponse.json(
+        { error: "Solicitação inválida." },
+        { status: 400 },
+      );
+    const { pollId, optionId, email, website, emailNoticeVersion } = payload;
     if (
       website ||
       typeof email !== "string" ||
@@ -43,12 +56,20 @@ export async function POST(request: NextRequest) {
       request.headers.get("x-vercel-forwarded-for")?.split(",")[0].trim() ||
       request.headers.get("x-forwarded-for")?.split(",")[0].trim() ||
       "local";
-    const { error } = await serverDb().rpc("fuego_cast_vote", {
-      p_poll: pollId,
-      p_option: optionId,
-      p_voter: hash(email.trim().toLowerCase()),
-      p_ip: hash(ip),
-    });
+    const { error } = await serverDb().rpc(
+      emailNoticeVersion === 1
+        ? "fuego_cast_vote_with_email"
+        : "fuego_cast_vote",
+      {
+        p_poll: pollId,
+        p_option: optionId,
+        p_voter: hash(email.trim().toLowerCase()),
+        p_ip: hash(ip),
+        ...(emailNoticeVersion === 1
+          ? { p_email: email.trim().toLowerCase() }
+          : {}),
+      },
+    );
     if (error) {
       if (error.code === "23505")
         return NextResponse.json(

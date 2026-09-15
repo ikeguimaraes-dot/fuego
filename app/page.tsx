@@ -58,6 +58,7 @@ export default function Home() {
           optionId: selected,
           email,
           website,
+          emailNoticeVersion: 1,
         }),
       });
       const data = await r.json();
@@ -73,7 +74,12 @@ export default function Home() {
     <>
       <header className="site-header">
         <a className="wordmark" href="#" aria-label="Fuego, início">
-          <img src="/brand/logo.svg" alt="Fuego — Templo do Sabor" width={612} height={304} />
+          <img
+            src="/brand/logo.svg"
+            alt="Fuego — Templo do Sabor"
+            width={612}
+            height={304}
+          />
         </a>
         <nav
           className={nav ? "navigation expanded" : "navigation"}
@@ -193,8 +199,8 @@ export default function Home() {
             </h2>
             <div className="essence-text">
               <p className="lead">
-                Entre o trabalho, os compromissos e os planos de última hora,
-                a vida acontece. E a sua comida merece acompanhar.
+                Entre o trabalho, os compromissos e os planos de última hora, a
+                vida acontece. E a sua comida merece acompanhar.
               </p>
               <p>
                 A Fuego nasceu para colocar sabor na rotina. Marmitas com
@@ -433,7 +439,9 @@ export default function Home() {
                         />
                       </label>
                       <small>
-                        Um voto por e-mail em cada votação.{" "}
+                        Seu e-mail será armazenado junto ao voto e poderá ser
+                        consultado pela equipe Fuego. Um voto por e-mail em cada
+                        votação.{" "}
                         <button
                           type="button"
                           className="inline-button"
@@ -504,13 +512,23 @@ export default function Home() {
           <a className="button light-button" href="#cardapio">
             Vem fazer parte <ArrowUpRight size={19} />
           </a>
-          <img src="/brand/flame-white.svg" className="closing-flame" alt="" aria-hidden="true" />
+          <img
+            src="/brand/flame-white.svg"
+            className="closing-flame"
+            alt=""
+            aria-hidden="true"
+          />
         </section>
       </main>
       <footer>
         <div className="footer-top">
           <a href="#" className="wordmark">
-            <img src="/brand/logo.svg" alt="Fuego — Templo do Sabor" width={612} height={304} />
+            <img
+              src="/brand/logo.svg"
+              alt="Fuego — Templo do Sabor"
+              width={612}
+              height={304}
+            />
           </a>
           <p>
             Comida de verdade.
@@ -553,16 +571,16 @@ export default function Home() {
             <div className="eyebrow">PRIVACIDADE</div>
             <h2 id="privacy-title">Seu voto, com cuidado.</h2>
             <p>
-              Usamos o e-mail informado somente para limitar a participação a um
-              voto por enquete. Ele é transformado no servidor em um
-              identificador criptográfico; o texto do e-mail não é salvo na
-              tabela de votos.
+              Armazenamos seu e-mail junto ao cardápio escolhido e à data do
+              voto. A equipe administrativa da Fuego pode consultar esses dados
+              para acompanhar a participação na votação. Eles não ficam
+              disponíveis ao público e não são usados para enviar publicidade.
             </p>
             <p>
-              Também transformamos o endereço de rede em um identificador para
-              limitar abusos. Os votos e identificadores ficam no Supabase e são
-              acessíveis apenas à equipe autorizada. Não usamos seu voto para
-              enviar publicidade.
+              Também geramos identificadores criptográficos do e-mail e do
+              endereço de rede para evitar votos repetidos e limitar abusos. Os
+              dados ficam no Supabase e são acessíveis apenas à equipe
+              autorizada. Não usamos seu voto para enviar publicidade.
             </p>
             <p>
               Esses identificadores permitem reconhecer participações repetidas,
