@@ -34,7 +34,7 @@ insert into public.fuego_admins (user_id) values ('UUID_DA_CONTA');
 
 Cardápios publicados são imutáveis. Enquetes encerradas não podem ser reabertas. Rascunhos podem ser editados. O prazo bloqueia votos automaticamente, mas o administrador deve encerrar a enquete anterior antes de abrir outra.
 
-Nenhuma votação comercial de exemplo foi publicada: os cardápios reais devem ser cadastrados pela equipe.
+Há uma primeira enquete em rascunho com três sugestões (Clássicos da casa, Leve & cheio de sabor e Da horta, com fuego). Revise as combinações e as datas antes de publicar. Nenhuma enquete de demonstração foi aberta ao público.
 
 ## Banco e segurança
 
