@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap");
 :root {
-  --cream: #f8f6ee;
-  --ink: #24271e;
-  --muted: #6c6f61;
-  --red: #e64d2f;
-  --line: #ddded3;
-  --green: #374d35;
+  --cream: #ffffff;
+  --ink: #111111;
+  --muted: #716766;
+  --red: #ee252d;
+  --line: #e9dedd;
+  --wine: #87181c;
   --serif: Georgia, "Times New Roman", serif;
 }
 * {
@@ -94,23 +94,12 @@ svg {
   gap: 32px;
 }
 .wordmark {
-  font-family: Georgia, serif;
-  letter-spacing: -5px;
-  font-weight: 900;
-  font-style: italic;
-  font-size: 52px;
-  line-height: 1;
-  position: relative;
+  display: block;
+  width: 142px;
+  flex-shrink: 0;
+  line-height: 0;
 }
-.wordmark span {
-  font-family: Arial, sans-serif;
-  font-style: normal;
-  font-size: 11px;
-  letter-spacing: 0;
-  position: absolute;
-  top: 8px;
-  right: -13px;
-}
+.wordmark img { width: 100%; height: auto; object-fit: contain; }
 .navigation {
   display: flex;
   gap: 33px;
@@ -136,8 +125,8 @@ svg {
     transform 0.2s;
 }
 .button:hover {
-  background: #c83f25;
-  border-color: #c83f25;
+  background: #c71924;
+  border-color: #c71924;
   transform: translateY(-2px);
 }
 .nav-cta {
@@ -241,7 +230,7 @@ h1 span {
   overflow: hidden;
   margin: 20px 20px 20px 0;
   border-radius: 5px;
-  background: #4a4f38;
+  background: #87181c;
 }
 .hero-image {
   position: absolute;
@@ -255,7 +244,7 @@ h1 span {
 .photo-shade {
   position: absolute;
   inset: 0;
-  background: linear-gradient(0deg, #1722156b, transparent 45%);
+  background: linear-gradient(0deg, #2509096b, transparent 45%);
 }
 .image-caption {
   position: absolute;
@@ -272,16 +261,16 @@ h1 span {
   width: 117px;
   height: 117px;
   border-radius: 50%;
-  background: #f4f0d9;
+  background: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 6px;
-  color: var(--green);
+  color: var(--wine);
   transform: rotate(12deg);
-  outline: 1px dashed var(--green);
-  outline-offset: -9px;
+  outline: none;
+  padding: 9px;
 }
 .round-stamp span {
   font-size: 8px;
@@ -306,12 +295,12 @@ h1 span {
 }
 .ticker {
   height: 64px;
-  background: var(--green);
+  background: var(--wine);
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   gap: 25px;
-  color: #f5f1da;
+  color: #ffffff;
   white-space: nowrap;
   overflow: hidden;
   font-size: 12px;
@@ -319,7 +308,7 @@ h1 span {
   font-weight: 500;
 }
 .ticker span {
-  color: #e2c180;
+  color: #f14624;
   font-size: 25px;
 }
 .section {
@@ -364,7 +353,7 @@ h1 span {
 }
 .values svg {
   width: 25px;
-  color: var(--green);
+  color: var(--wine);
   stroke-width: 1.4;
   margin-bottom: 16px;
 }
@@ -380,7 +369,7 @@ h1 span {
   max-width: 230px;
 }
 .how {
-  background: #edeedf;
+  background: #fff3ef;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10%;
@@ -428,7 +417,7 @@ h1 span {
   display: flex;
   gap: 20px;
   padding: 20px 0;
-  border-top: 1px solid #ced0bf;
+  border-top: 1px solid #ead9d6;
 }
 .steps article > span {
   font-family: var(--serif);
@@ -448,7 +437,7 @@ h1 span {
   max-width: 325px;
 }
 .voting {
-  background: #f8f6ee;
+  background: #ffffff;
 }
 .voting-heading {
   display: flex;
@@ -464,7 +453,7 @@ h1 span {
   color: var(--muted);
 }
 .vote-seal {
-  border: 1px solid #c9caba;
+  border: 1px solid #e8c9c6;
   border-radius: 50%;
   width: 110px;
   height: 110px;
@@ -474,28 +463,28 @@ h1 span {
   justify-content: center;
   gap: 9px;
   transform: rotate(12deg);
-  color: var(--green);
+  color: var(--wine);
 }
 .vote-seal span {
   font-size: 8px;
   letter-spacing: 2px;
 }
 .empty-state {
-  background: #eeeee2;
+  background: #fff3ef;
   border: 1px solid var(--line);
   border-radius: 7px;
   padding: 50px 25px;
   text-align: center;
 }
 .empty-icon {
-  background: #e0e3d1;
+  background: #f9ded9;
   border-radius: 50%;
   width: 60px;
   height: 60px;
   display: grid;
   place-items: center;
   margin: 0 auto 20px;
-  color: var(--green);
+  color: var(--wine);
 }
 .empty-state .eyebrow {
   justify-content: center;
@@ -552,13 +541,13 @@ h1 span {
   font-size: 9px;
   letter-spacing: 0.7px;
   font-weight: 600;
-  color: var(--green);
+  color: var(--wine);
 }
 .live-badge span {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: #628444;
+  background: #ee252d;
 }
 .menu-options {
   display: grid;
@@ -581,12 +570,12 @@ h1 span {
   position: relative;
 }
 .menu-card:hover {
-  border-color: var(--green);
+  border-color: var(--wine);
 }
 .menu-card.selected {
-  border-color: var(--green);
-  background: #ecedde;
-  box-shadow: inset 0 0 0 1px var(--green);
+  border-color: var(--wine);
+  background: #fff0ed;
+  box-shadow: inset 0 0 0 1px var(--wine);
 }
 .menu-card input {
   position: absolute;
@@ -608,19 +597,19 @@ h1 span {
 .radio-dot {
   width: 20px;
   height: 20px;
-  border: 1px solid #aaae9a;
+  border: 1px solid #cca9a4;
   border-radius: 50%;
   display: grid;
   place-items: center;
 }
 .selected .radio-dot {
-  background: var(--green);
+  background: var(--wine);
   color: white;
 }
 .menu-tag {
   font-size: 9px;
   letter-spacing: 0.5px;
-  color: var(--green);
+  color: var(--wine);
   margin-bottom: 9px;
 }
 .menu-card h3 {
@@ -680,9 +669,9 @@ h1 span {
 input,
 textarea,
 select {
-  border: 1px solid #c9ccbb;
+  border: 1px solid #d9c4c1;
   border-radius: 4px;
-  background: #fffcf7;
+  background: #ffffff;
   padding: 12px;
   color: var(--ink);
   max-width: 100%;
@@ -691,8 +680,8 @@ select {
 input:focus,
 textarea:focus,
 select:focus {
-  border-color: var(--green);
-  box-shadow: 0 0 0 2px #374d351f;
+  border-color: var(--wine);
+  box-shadow: 0 0 0 2px #87181c1f;
 }
 .vote-submit small {
   display: block;
@@ -718,11 +707,11 @@ select:focus {
   display: flex;
   align-items: center;
   gap: 16px;
-  background: #e4e9d8;
+  background: #fff0ed;
   padding: 25px;
   margin-top: 25px;
   border-radius: 6px;
-  color: var(--green);
+  color: var(--wine);
 }
 .vote-success h3 {
   font-size: 17px;
@@ -808,8 +797,8 @@ details[open] .plus {
   z-index: 1;
 }
 .light-button:hover {
-  background: #eae7d7;
-  border-color: #eae7d7;
+  background: #ffefea;
+  border-color: #ffefea;
 }
 .closing-flame {
   position: absolute;
@@ -880,7 +869,7 @@ footer {
 .modal-backdrop {
   position: fixed;
   inset: 0;
-  background: #1c2419b3;
+  background: #260b0db3;
   z-index: 50;
   display: grid;
   place-items: center;
@@ -930,7 +919,7 @@ footer {
   border-bottom: 1px solid var(--line);
 }
 .admin-header .wordmark {
-  font-size: 40px;
+  width: 124px;
 }
 .admin-header > div {
   display: flex;
@@ -954,7 +943,7 @@ footer {
   padding: 35px;
   border: 1px solid var(--line);
   border-radius: 10px;
-  background: #f0f0e4;
+  background: #fff3ef;
 }
 .login-card h1 {
   font-size: 35px;
@@ -1007,7 +996,7 @@ footer {
   border: 1px solid var(--line);
   padding: 24px;
   border-radius: 6px;
-  background: #eeeee2;
+  background: #fff3ef;
 }
 .stat-card span {
   font-size: 11px;
@@ -1052,12 +1041,12 @@ footer {
   text-transform: uppercase;
   padding: 5px 9px;
   border-radius: 3px;
-  background: #e9e9df;
+  background: #f2e9e6;
   display: inline-block;
 }
 .status-pill.open {
-  background: #e0e8d4;
-  color: var(--green);
+  background: #ffdfdc;
+  color: var(--wine);
 }
 .admin-poll-actions {
   display: flex;
@@ -1086,14 +1075,14 @@ footer {
 }
 .result-track {
   height: 7px;
-  background: #e6e7da;
+  background: #f0dfdc;
   border-radius: 5px;
   overflow: hidden;
 }
 .result-track span {
   height: 100%;
   display: block;
-  background: var(--green);
+  background: var(--wine);
   border-radius: 5px;
   transition: width 0.3s;
 }
@@ -1120,7 +1109,7 @@ footer {
   gap: 20px;
 }
 .option-editor {
-  background: #eeeee2;
+  background: #fff3ef;
   padding: 22px;
   border-radius: 6px;
   margin: 20px 0;
@@ -1143,16 +1132,16 @@ footer {
 }
 .notice {
   padding: 15px 20px;
-  background: #e5eadb;
+  background: #ffede8;
   border-radius: 5px;
   margin: 20px 0;
-  color: var(--green);
+  color: var(--wine);
   font-size: 13px;
 }
 .admin-empty {
   text-align: center;
   padding: 55px;
-  border: 1px dashed #bfc4b0;
+  border: 1px dashed #dcb3ae;
   border-radius: 8px;
 }
 .admin-empty h3 {
@@ -1265,7 +1254,7 @@ footer {
     padding: 0 6%;
   }
   .wordmark {
-    font-size: 43px;
+    width: 108px;
   }
   .nav-cta {
     margin-left: auto;
@@ -1580,4 +1569,16 @@ footer {
     transition: none !important;
     animation: none !important;
   }
+}
+
+/* Original brand artwork, extracted as vector paths from the supplied guide. */
+.round-stamp img { object-fit: contain; }
+.closing-flame { object-fit: contain; }
+h1 span { font-family: 'Manrope', sans-serif; font-weight: 800; font-style: italic; }
+h2 em { font-family: 'Manrope', sans-serif; font-weight: 650; }
+.button { background: #d91e28; border-color: #d91e28; }
+.light-button { background: white; color: var(--ink); border-color: white; }
+@media (max-width: 760px) {
+  .site-header { gap: 14px; }
+  .admin-header .wordmark { width: 108px; }
 }

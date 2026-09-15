@@ -74,7 +74,7 @@ export default function Home() {
     <>
       <header className="site-header">
         <a className="wordmark" href="#" aria-label="Fuego, início">
-          fuego<span>®</span>
+          <img src="/brand/logo.svg" alt="Fuego — Templo do Sabor" width={612} height={304} />
         </a>
         <nav
           className={nav ? "navigation expanded" : "navigation"}
@@ -159,9 +159,7 @@ export default function Home() {
             <div className="photo-shade" />
             <span className="image-caption">SABOR QUE ACENDE O SEU DIA.</span>
             <div className="round-stamp">
-              <span>COMIDA BOA</span>
-              <Flame size={40} strokeWidth={1.5} />
-              <span>VIDA LEVE</span>
+              <img src="/brand/seal.svg" alt="Fuego — Templo do Sabor" />
             </div>
             <div className="photo-note">
               <span>um respiro na rotina.</span>
@@ -507,13 +505,13 @@ export default function Home() {
           <a className="button light-button" href="#cardapio">
             Vem fazer parte <ArrowUpRight size={19} />
           </a>
-          <Flame className="closing-flame" strokeWidth={0.8} />
+          <img src="/brand/flame-white.svg" className="closing-flame" alt="" aria-hidden="true" />
         </section>
       </main>
       <footer>
         <div className="footer-top">
           <a href="#" className="wordmark">
-            fuego<span>®</span>
+            <img src="/brand/logo.svg" alt="Fuego — Templo do Sabor" width={612} height={304} />
           </a>
           <p>
             Comida de verdade.

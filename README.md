@@ -64,7 +64,7 @@ O diretório está vinculado ao projeto Vercel `fuego`. Configure as quatro vari
 
 ## Identidade visual
 
-Identidade tipográfica provisória em creme, verde e vermelho. Os logos mencionados na solicitação não estavam disponíveis na conversa nem no diretório. Substitua o wordmark pelos arquivos oficiais quando forem fornecidos.
+Identidade oficial extraída do PDF `Fuego-Branding-SET26.pdf`, fornecido pelo proprietário. Os SVGs em `public/brand/` preservam os contornos vetoriais do logo, da tagline “Templo do Sabor”, do selo e da chama. O favicon usa o símbolo oficial. Paleta digital amostrada da renderização do guia: vermelho `#EE252D`, vinho `#87181C`, preto `#111111`, branco `#FFFFFF` e laranja `#F14624`. Botões usam um vermelho mais escuro para legibilidade do texto branco.
 
 Fotos editoriais ilustrativas do Unsplash (não representam os produtos reais):
 

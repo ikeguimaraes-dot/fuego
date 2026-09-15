@@ -269,7 +269,7 @@ export default function Admin() {
     <>
       <header className="admin-header">
         <a href="/" className="wordmark">
-          fuego<span>®</span>
+          <img src="/brand/logo.svg" alt="Fuego — Templo do Sabor" width={612} height={304} />
         </a>
         <div>
           <a href="/">
