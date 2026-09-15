@@ -34,7 +34,7 @@ insert into public.fuego_admins (user_id) values ('UUID_DA_CONTA');
 
 Cardápios publicados são imutáveis. Enquetes encerradas não podem ser reabertas. Rascunhos podem ser editados. O prazo bloqueia votos automaticamente, mas o administrador deve encerrar a enquete anterior antes de abrir outra.
 
-Há uma primeira enquete em rascunho com três sugestões (Clássicos da casa, Leve & cheio de sabor e Da horta, com fuego). Revise as combinações e as datas antes de publicar. Nenhuma enquete de demonstração foi aberta ao público.
+Há uma primeira enquete em rascunho com três sugestões (Clássicos da casa, Favoritos da semana e Da horta, com fuego). Revise as combinações e as datas antes de publicar. Nenhuma enquete de demonstração foi aberta ao público.
 
 ## Banco e segurança
 
@@ -66,7 +66,8 @@ O diretório está vinculado ao projeto Vercel `fuego`. Configure as quatro vari
 
 Identidade oficial extraída do PDF `Fuego-Branding-SET26.pdf`, fornecido pelo proprietário. Os SVGs em `public/brand/` preservam os contornos vetoriais do logo, da tagline “Templo do Sabor”, do selo e da chama. O favicon usa o símbolo oficial. Paleta digital amostrada da renderização do guia: vermelho `#EE252D`, vinho `#87181C`, preto `#111111`, branco `#FFFFFF` e laranja `#F14624`. Botões usam um vermelho mais escuro para legibilidade do texto branco.
 
-Fotos editoriais ilustrativas do Unsplash (não representam os produtos reais):
+Fotos das marmitas fornecidas pelo proprietário, preservadas em PNG com transparência:
+- `public/images/marmita-carne.png`
+- `public/images/marmita-empanado.png`
 
-- https://images.unsplash.com/photo-1547592180-85f173990554
-- https://images.unsplash.com/photo-1512621776951-a57141f2eefd
+A comunicação apresenta comida saborosa e prática, sem posicionamento fit ou dietético.

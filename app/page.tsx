@@ -4,7 +4,6 @@ import {
   ArrowUpRight,
   ArrowRight,
   Flame,
-  Leaf,
   Heart,
   Clock3,
   Check,
@@ -112,7 +111,7 @@ export default function Home() {
             <h1>
               Sua rotina.
               <br />
-              Mais leve.
+              Mais sabor.
               <br />
               <span>Mais fuego.</span>
               <svg
@@ -152,8 +151,8 @@ export default function Home() {
           <div className="hero-visual">
             <img
               className="hero-image"
-              src="/images/hero.jpg"
-              alt="Refeição colorida com vegetais frescos, grãos e ingredientes variados"
+              src="/images/marmita-carne.png"
+              alt="Marmita com carne de panela, batatas, arroz branco e farofa"
               fetchPriority="high"
             />
             <div className="photo-shade" />
@@ -162,7 +161,7 @@ export default function Home() {
               <img src="/brand/seal.svg" alt="Fuego — Templo do Sabor" />
             </div>
             <div className="photo-note">
-              <span>um respiro na rotina.</span>
+              <span>comida de dar vontade.</span>
               <svg viewBox="0 0 75 45" aria-hidden="true">
                 <path
                   d="M3 4q52 0 48 29m-12-5 12 10 16-13"
@@ -186,15 +185,15 @@ export default function Home() {
           </div>
           <div className="essence-grid">
             <h2>
-              Comer bem não
+              Comida boa.
               <br />
-              precisa ser mais
+              Sem dar
               <br />
-              <em>uma tarefa.</em>
+              <em>trabalho.</em>
             </h2>
             <div className="essence-text">
               <p className="lead">
-                Entre uma reunião e outra, um treino e os planos de última hora,
+                Entre o trabalho, os compromissos e os planos de última hora,
                 a vida acontece. E a sua comida merece acompanhar.
               </p>
               <p>
@@ -209,7 +208,7 @@ export default function Home() {
           </div>
           <div className="values">
             <article>
-              <Leaf />
+              <Utensils />
               <h3>De verdade, sempre.</h3>
               <p>
                 Ingredientes que você conhece. Comida que dá gosto de comer.
@@ -237,8 +236,8 @@ export default function Home() {
         <section id="como-funciona" className="how section">
           <div className="how-image">
             <img
-              src="/images/ingredients.jpg"
-              alt="Salada com folhas, vegetais e ingredientes coloridos"
+              src="/images/marmita-empanado.png"
+              alt="Marmita com filé empanado, arroz branco, feijão e purê"
               loading="lazy"
             />
             <div className="image-label">

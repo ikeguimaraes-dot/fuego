@@ -235,11 +235,12 @@ h1 span {
 .hero-image {
   position: absolute;
   object-position: center;
-  filter: brightness(0.84);
+  filter: drop-shadow(0 22px 20px #21050540);
+  transform: scale(0.88);
   transition: transform 1s;
 }
 .hero-visual:hover .hero-image {
-  transform: scale(1.03);
+  transform: scale(0.91);
 }
 .photo-shade {
   position: absolute;
@@ -382,8 +383,9 @@ h1 span {
   overflow: hidden;
 }
 .how-image img {
-  filter: brightness(0.8);
-  object-position: 40% center;
+  object-position: center;
+  filter: drop-shadow(0 20px 18px #21050540);
+  transform: scale(0.88);
 }
 .image-label {
   position: absolute;
@@ -1581,4 +1583,14 @@ h2 em { font-family: 'Manrope', sans-serif; font-weight: 650; }
 @media (max-width: 760px) {
   .site-header { gap: 14px; }
   .admin-header .wordmark { width: 108px; }
+}
+
+/* Transparent product photos supplied by Fuego. */
+.hero-visual, .how-image {
+  background: radial-gradient(ellipse at 45% 40%, #bc3030 0%, #87181c 58%, #5c1116 100%);
+}
+.hero-image, .how-image img { object-fit: cover; }
+.image-label { top: 25px; bottom: auto; font-size: 27px; }
+@media (min-width: 761px) {
+  .photo-note { bottom: 48px; }
 }
